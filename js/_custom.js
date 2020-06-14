@@ -113,10 +113,10 @@ $(".projects__container").each(function () {
         slidesPerView: 2,
       },
       767: {
-        slidesPerView: 1,
+        slidesPerView: 2,
       },
       320: {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
       },
     },
     navigation: {
@@ -142,4 +142,52 @@ $(".agency__link").on("click", function (event) {
   event.preventDefault();
   $(this).hide();
   $(".agency__text").removeClass("hidden");
+});
+
+// Intro Map
+$(".intro__map__item").on("click", function () {
+  $(".intro__map__item").removeClass("active");
+  $(this).addClass("active");
+  $(".intro__slide").removeClass("swiper-slide-active");
+  // if ($(this).data("slide") === "#introSlide-1") {
+  //   $(".intro__slider .swiper-wrapper").css(
+  //     "transform",
+  //     "translate3d(-99.2vw, 0px, 0px)"
+  //   );
+  // } else if ($(this).data("slide") === "#introSlide-2") {
+  //   $(".intro__slider  .swiper-wrapper").css(
+  //     "transform",
+  //     "translate3d(-198.4vw, 0px, 0px)"
+  //   );
+  // } else if ($(this).data("slide") === "#introSlide-3") {
+  //   $(".intro__slider  .swiper-wrapper").css(
+  //     "transform",
+  //     "translate3d(-297.5vw, 0px, 0px)"
+  //   );
+  // } else if ($(this).data("slide") === "#introSlide-4") {
+  //   $(".intro__slider  .swiper-wrapper").css(
+  //     "transform",
+  //     "translate3d(-396.7vw, 0px, 0px)"
+  //   );
+  if ($(this).data("slide") === "#introSlide-1") {
+    $(".intro__slider .swiper-wrapper").css(
+      "transform",
+      "translate3d(-100vw, 0px, 0px)"
+    );
+  } else if ($(this).data("slide") === "#introSlide-2") {
+    $(".intro__slider  .swiper-wrapper").css(
+      "transform",
+      "translate3d(-200vw, 0px, 0px)"
+    );
+  } else if ($(this).data("slide") === "#introSlide-3") {
+    $(".intro__slider  .swiper-wrapper").css(
+      "transform",
+      "translate3d(-300vw, 0px, 0px)"
+    );
+  } else if ($(this).data("slide") === "#introSlide-4") {
+    $(".intro__slider  .swiper-wrapper").css(
+      "transform",
+      "translate3d(-400vw, 0px, 0px)"
+    );
+  }
 });
