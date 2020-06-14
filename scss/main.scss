@@ -52,9 +52,9 @@ body {
 }
 
 .intro__slide {
-  height: 568px;
   background-size: cover;
   padding-top: 164px;
+  height: 100vh;
 }
 
 .intro__slide__date {
@@ -171,8 +171,9 @@ body {
   align-items: center;
   color: #fff;
   width: 95px;
+  min-width: 95px;
   height: 100%;
-  height: 177px;
+  height: 187px;
   background: linear-gradient(180deg, #00a0b4 0%, #5aaa96 100%);
   border-radius: 0px 10px 10px 0px;
   transition: all 0.2s linear;
@@ -207,6 +208,73 @@ body {
 
 .intro__arrows--mobile {
   display: none;
+}
+
+.intro__map {
+  height: 177px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.intro__map__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.intro__map__item {
+  padding-top: 28px;
+  padding-left: 28px;
+  padding-right: 28px;
+  position: relative;
+  height: 177px;
+  max-width: 260px;
+  border-right: 1px solid #f4f4f4;
+  background-color: #fff;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .intro__thumbs__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "MyriadPro-Regular";
+    font-style: normal;
+    font-weight: normal;
+    color: $text;
+  }
+
+  &:hover {
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0365489),
+      0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0525061),
+      0px 12.5216px 10.0172px rgba(0, 0, 0, 0.065),
+      0px 22.3363px 17.869px rgba(0, 0, 0, 0.0774939),
+      0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0934511),
+      0px 100px 80px rgba(0, 0, 0, 0.13);
+    zoom: 1.01;
+    border-color: transparent;
+    height: 194px;
+    margin-top: -8px;
+    z-index: 11;
+
+    .intro__thumbs__title {
+      color: $blue;
+      font-family: "MyriadPro-Bold";
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
 }
 
 // Agency
@@ -315,6 +383,10 @@ body {
   display: none;
 }
 
+.employees__container {
+  overflow: visible;
+}
+
 // Projects
 .projects {
   padding-top: 50px;
@@ -368,6 +440,7 @@ body {
   cursor: pointer;
   transition: all 0.2s linear;
   border-radius: 10px;
+  margin-right: 20px;
 }
 
 .projects__slide:hover {
@@ -447,6 +520,10 @@ body {
   z-index: 1;
   transition: all 0.2s linear;
 }
+
+// .projects__container {
+//   overflow: visible;
+// }
 
 // Apply
 .apply {
@@ -689,6 +766,10 @@ body {
     margin-left: 41px;
   }
 
+  .intro__map {
+    display: none;
+  }
+
   .agency__title {
     font-size: 28px;
     line-height: 36px;
@@ -874,6 +955,10 @@ body {
 @media (max-width: 320px) {
   .intro__arrows__wrapper {
     display: none;
+  }
+
+  .footer__social img {
+    margin-left: 20px;
   }
 }
 

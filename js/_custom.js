@@ -1,13 +1,13 @@
 // Intro Slider
-var galleryThumbs = new Swiper(".intro__thumbs", {
-  spaceBetween: 4,
-  slidesPerView: 4,
-  //   loop: true,
-  //   freeMode: true,
-  loopedSlides: 5, //looped slides should be the same
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-});
+// var galleryThumbs = new Swiper(".intro__thumbs", {
+//   spaceBetween: 4,
+//   slidesPerView: 4,
+//   //   loop: true,
+//   //   freeMode: true,
+//   loopedSlides: 5, //looped slides should be the same
+//   watchSlidesVisibility: true,
+//   watchSlidesProgress: true,
+// });
 var galleryTop = new Swiper(".intro__slider", {
   spaceBetween: 4,
   loop: true,
@@ -15,35 +15,59 @@ var galleryTop = new Swiper(".intro__slider", {
     nextEl: ".intro__next",
     prevEl: ".intro__prev",
   },
-  thumbs: {
-    swiper: galleryThumbs,
-  },
+  // thumbs: {
+  //   swiper: galleryThumbs,
+  // },
 });
 
 // Employees Slider
-var swiper = new Swiper(".employees__container", {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: ".employees__next",
-    prevEl: ".employees__prev",
-  },
-  pagination: {
-    el: ".employees__progress",
-    type: "progressbar",
-  },
-  breakpoints: {
-    1199: {
-      slidesPerView: 4,
+// var swiper = new Swiper(".employees__container", {
+//   slidesPerView: 4,
+//   spaceBetween: 30,
+//   loop: true,
+//   navigation: {
+//     nextEl: ".employees__next",
+//     prevEl: ".employees__prev",
+//   },
+//   pagination: {
+//     el: ".employees__progress",
+//     type: "progressbar",
+//   },
+//   breakpoints: {
+//     1199: {
+//       slidesPerView: 4,
+//     },
+//     767: {
+//       slidesPerView: 3,
+//     },
+//     320: {
+//       slidesPerView: 1.3,
+//     },
+//   },
+// });
+
+$(".employees__container").each(function () {
+  let $this = $(this);
+
+  new Swiper($this, {
+    grabCursor: true,
+    freeMode: true,
+    pagination: {
+      el: ".employees__progress",
+      type: "progressbar",
     },
-    767: {
-      slidesPerView: 3,
+    breakpoints: {
+      1199: {
+        slidesPerView: 4,
+      },
+      767: {
+        slidesPerView: 3,
+      },
+      320: {
+        slidesPerView: 1.3,
+      },
     },
-    320: {
-      slidesPerView: 1.3,
-    },
-  },
+  });
 });
 
 // Project Slider
@@ -71,6 +95,26 @@ var projectsSlider = new Swiper(".projects__container", {
     },
   },
 });
+
+// $(".projects__container").each(function () {
+//   let $this = $(this);
+
+//   new Swiper($this, {
+//     grabCursor: true,
+//     freeMode: true,
+//     breakpoints: {
+//       1199: {
+//         slidesPerView: 1,
+//       },
+//       767: {
+//         slidesPerView: 1,
+//       },
+//       320: {
+//         slidesPerView: 1,
+//       },
+//     },
+//   });
+// });
 
 // Burger menu
 $(".header__burger").on("click", function () {
