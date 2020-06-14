@@ -213,6 +213,7 @@ body {
 .agency {
   padding-top: 190px;
   margin-bottom: 50px;
+  background-color: #fff;
 }
 
 .agency__title {
@@ -318,6 +319,7 @@ body {
 .projects {
   padding-top: 50px;
   padding-bottom: 100px;
+  background-color: #fff;
 }
 
 .projects__title {
@@ -449,6 +451,7 @@ body {
 // Apply
 .apply {
   padding-bottom: 100px;
+  background-color: #fff;
   .container {
     display: flex;
     align-items: center;
@@ -552,22 +555,6 @@ body {
 }
 
 @media (max-width: $tablet) {
-  //   .intro__nav {
-  //     position: static;
-
-  //     .container {
-  //       //   max-width: 100%;
-  //     }
-  //   }
-
-  //   .intro__thumbs__title {
-  //     font-size: 14px;
-  //   }
-
-  //   .intro__thumbs__slide {
-  //     min-width: 200px;
-  //     width: 200px;
-  //   }
   .intro__nav {
     display: none;
     &--tablet {
@@ -577,6 +564,14 @@ body {
       background-color: #ccc;
       height: auto;
     }
+  }
+
+  .intro__nav__bg {
+    background-color: rgb(46, 46, 46);
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    z-index: -1;
   }
 
   .intro__nav__item {
@@ -873,6 +868,12 @@ body {
     &.active {
       background-color: #000;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .intro__arrows__wrapper {
+    display: none;
   }
 }
 
