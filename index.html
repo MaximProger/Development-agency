@@ -27,7 +27,7 @@
         <div class="container">
             <div class="header__inner row">
                 <div class="header__left col">
-                    <a class="header__link" href="#"><img src="./img/logo.png" alt="Logo"></a>
+                    <a class="header__link" href="#"><img src="./img/logo.png" class="header__logo" alt="Logo"></a>
                 </div>
                 <div class="header__right col d-flex justify-content-between align-items-center">
                     <a class="header__link" href="#"><img src="./img/rck.svg" alt="Rck"></a>
@@ -480,29 +480,33 @@
     <footer class="footer wow fadeInUp">
         <div class="container">
             <div class="footer__wrapper row">
-                <div class="footer__left col-12 col-md-7 col-xl-7">
+                <div class="footer__left col-12 col-md-12 col-xl-7">
                     <div class="row">
-                        <div class="footer__left-1 col-12 col-md-6 col-xl-6">
+                        <div class="footer__left-1 col-12 col-md-12 col-xl-6">
                             <p>390000, Рязанская область,
                                 г. Рязань, ул. Каширина, 1а </p>
-                            <p>+7 (4912) 600 513
-                                <a href="#" class="footer__social__link">ano.arpck@gmail.com</a></p>
+                            <p class="footer__tablet">+7 (4912) 600 513
+                                <a href="#"
+                                    class="footer__social__link footer__social__link--email">ano.arpck@gmail.com</a></p>
                         </div>
 
-                        <div class="footer__left-2 col-12 col-md-6 col-xl-6">
+                        <div class="footer__left-2 col-12 col-md-12 col-xl-6">
                             <span>
                                 ИНН/КПП 6234189810/623401001
                             </span>
                             <span>
                                 ОГРН 1206200004350
                             </span>
+                            <p class="footer__mobile">+7 (4912) 600 513
+                                <a href="#"
+                                    class="footer__social__link footer__social__link--email">ano.arpck@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="footer__right col-12 col-md-5 col-xl-5">
+                <div class="footer__right col-12 col-md-12 col-xl-5">
                     <div class="footer__right-1 col-12">
-                        <div class="d-flex justify-content-end align-item-center">
-                            <img src="./img/footer__rck.svg" alt="rck">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <img src="./img/footer__rck.svg" class="footer__rck" alt="rck">
                             <img class="footer__line" src="./img/footer__line.svg" alt="|">
                             <div class="footer__social">
                                 <a href="#" class="footer__social__link">
@@ -518,8 +522,8 @@
                         </div>
                     </div>
                     <div class="footer__right-2 col-12">
-                        <div class="d-flex justify-content-end align-item-center">
-                            <img src="./img/footer__export.png" alt="rck">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <img src="./img/footer__export.png" class="footer__export" alt="export">
                             <img class="footer__line" src="./img/footer__line.svg" alt="|">
                             <div class="footer__social">
                                 <a href="#" class="footer__social__link">
@@ -538,6 +542,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Window -->
+    <div class="modal__mask">
+        <div class="modal__window">
+            <div class="form__header">
+                <img src="./img/close--gray.svg" class="modal__close" alt="Close">
+            </div>
+            <h2 class="apply__title">Оставьте заявку</h2>
+            <div class="apply__subtitle">Мы свяжемся с вами в ближайшее время</div>
+
+            <form method="POST" class="apply__form">
+                <input type="text" name="NAME" id="NAME" placeholder="Как вас зовут?" required>
+                <input type="text" name="ORGANIZATION" id="ORGANIZATION" placeholder="Организация" required>
+                <input type="tel" name="PHONE" id="PHONE" placeholder="Телефон" required>
+                <input type="email" name="EMAIL" id="EMAIL" placeholder="loginov.vv@mail.ru" required>
+                <input class="apply__submit" type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

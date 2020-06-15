@@ -118,6 +118,30 @@ $(document).ready(function () {
     }
   });
 
+  // Modal Window
+  $(".modal__close").on("click", function () {
+    $(".modal__mask").hide(500);
+  });
+
+  $(document).keyup(function (e) {
+    if (e.key === "Escape") {
+      $(".modal__mask").hide(500);
+    }
+  });
+
+  $(document).mouseup(function (e) {
+    let modalctr = $(".modal__mask");
+    let modal = $(".modal__window");
+    if (!modal.is(e.target) && modal.has(e.target).length === 0) {
+      modalctr.hide();
+    }
+  });
+
+  $(".projects__link").on("click", function (event) {
+    event.preventDefault();
+    $(".modal__mask").show(500);
+  });
+
   // Detail New
   var newsdetailhumbs = new Swiper(".newsdetail-thumbs", {
     spaceBetween: 4,
