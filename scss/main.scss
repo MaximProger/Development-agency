@@ -58,7 +58,6 @@ body {
   padding-top: 164px;
   height: 85vh;
   width: 100vw;
-  margin-right: 0 !important;
 }
 
 .intro__slide__date {
@@ -817,13 +816,13 @@ body {
     display: none;
   }
 
-  .employees__container {
-    overflow: hidden;
-  }
+  // .employees__container {
+  //   overflow: hidden;
+  // }
 
-  .projects__container {
-    overflow: hidden;
-  }
+  // .projects__container {
+  //   overflow: hidden;
+  // }
 
   .agency {
     padding-top: 50px;
@@ -1036,9 +1035,9 @@ body {
     border-radius: 10px;
   }
 
-  .employees__container {
-    overflow: hidden;
-  }
+  // .employees__container {
+  //   overflow: hidden;
+  // }
 
   .projects {
     padding-top: 30px;
@@ -1067,9 +1066,9 @@ body {
     border-radius: 10px;
   }
 
-  .projects__container {
-    overflow: hidden;
-  }
+  // .projects__container {
+  //   overflow: hidden;
+  // }
 
   .apply {
     padding-bottom: 60px;
@@ -1108,7 +1107,7 @@ body {
       z-index: 10;
       display: block;
       position: absolute;
-      top: 75px;
+      top: 60px;
       left: 0;
       background-color: #fff;
       width: 100%;
@@ -1119,6 +1118,10 @@ body {
         0px 41.7776px 33.4221px rgba(0, 0, 0, 0.150959),
         0px 100px 80px rgba(0, 0, 0, 0.21);
       border-radius: 0px 0px 10px 10px;
+    }
+
+    .container {
+      max-width: 330px;
     }
   }
 
@@ -1165,7 +1168,7 @@ body {
 
 // Detail News
 .newsdetail__intro {
-  height: 100vh;
+  height: 80vh;
 }
 
 .newsdetail__content {
