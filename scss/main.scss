@@ -305,6 +305,21 @@ body {
   }
 }
 
+.intro__arrows--test {
+  position: absolute;
+  z-index: 10;
+  right: -10%;
+  top: 45%;
+
+  img {
+    outline: 0;
+    transition: all 0.2s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
 // Agency
 .agency {
   padding-top: 190px;
@@ -489,7 +504,7 @@ body {
     box-sizing: border-box;
     border-radius: 100px;
     color: #fff;
-    transition: all 0.2s linear;
+    // transition: all 0.2s ease;
     margin-top: 25px;
     width: 230px;
     height: auto;
@@ -527,7 +542,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   color: #ffffff;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease;
   margin: 0;
 }
 
@@ -540,7 +555,7 @@ body {
   padding: 0;
   font-size: 0;
   border: none;
-  transition: all 0.2s linear;
+  // transition: all 0.2s ease;
   z-index: 2;
 }
 
@@ -628,6 +643,7 @@ body {
     display: block;
     width: 100%;
     border: none;
+    border-radius: 0;
     outline: none;
     border-bottom: 1px solid #5a5a5a;
     margin-bottom: 45px;
@@ -694,9 +710,12 @@ body {
 
   &--email {
     color: $blue;
+    border-bottom: 1px solid transparent;
 
     &:hover {
       color: $blue;
+      transform: none;
+      border-color: $blue;
     }
   }
 }
@@ -816,13 +835,10 @@ body {
     display: none;
   }
 
-  // .employees__container {
-  //   overflow: hidden;
-  // }
-
-  // .projects__container {
-  //   overflow: hidden;
-  // }
+  .intro__arrows--test {
+    right: -10%;
+    top: 25%;
+  }
 
   .agency {
     padding-top: 50px;
@@ -975,6 +991,11 @@ body {
       // width: 24px;
       // height: 12px;
     }
+  }
+
+  .intro__arrows--test {
+    right: 0;
+    top: 25%;
   }
 
   .intro__slide__wrapper {
