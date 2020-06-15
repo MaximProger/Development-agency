@@ -1172,18 +1172,29 @@ body {
   }
 
   .modal__close {
-    height: 17px;
-    width: 17px;
+    height: 15px;
+    width: 15px;
+    right: -10px !important;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: $mobile-sm) {
   .intro__arrows__wrapper {
     display: none;
   }
 
   .footer__social img {
     margin-left: 20px;
+  }
+
+  .projects__slide {
+    min-width: 300px;
+    width: 300px;
+  }
+
+  .employees__slide__img {
+    width: 200px;
+    height: 200px;
   }
 }
 
