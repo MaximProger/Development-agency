@@ -9,30 +9,23 @@ $(document).ready(function () {
     },
     on: {
       init: function () {
-        $(
-          "[data-slide=" +
-            $(".intro__slide.swiper-slide-active").attr("id") +
-            "]"
-        ).addClass("active");
-        console.log($(".intro__slide.swiper-slide-active").attr("id"));
+        $("[data-slide=" + 1 + "]").addClass("active");
       },
     },
   });
 
   galleryTop.on("slideChange", function () {
     $(".intro__map__item").removeClass("active");
-    let slideId = $(".intro__slide.swiper-slide-active").attr("id");
-    $("[data-slide=" + $(".intro__slide.swiper-slide-active").attr("id") + "]")
-      .next()
-      .addClass("active");
-    if ($(".intro__thumbs__all").hasClass("active")) {
-      $(".intro__thumbs__all").removeClass("active");
-      $("[data-slide=" + "introSlide-1" + "]").addClass("active");
+    $("[data-slide=" + galleryTop.activeIndex + "]").addClass("active");
+    if (galleryTop.activeIndex == 5) {
+      $(".intro__map__item").removeClass("active");
+      $("[data-slide=" + 1 + "]").addClass("active");
     }
-    // else {
-    //   $("[data-slide=" + "introSlide-1" + "]").removeClass("active");
-    // }
-    console.log(slideId);
+
+    if (galleryTop.activeIndex == 0) {
+      $(".intro__map__item").removeClass("active");
+      $("[data-slide=" + 4 + "]").addClass("active");
+    }
   });
 
   // Employees Slider
@@ -113,28 +106,15 @@ $(document).ready(function () {
   $(".intro__map__item").on("click", function () {
     $(".intro__map__item").removeClass("active");
     $(this).addClass("active");
-    $(".intro__slide").removeClass("swiper-slide-active");
 
-    if ($(this).data("slide") === "introSlide-1") {
-      $(".intro__slider .swiper-wrapper").css(
-        "transform",
-        "translate3d(-100vw, 0px, 0px)"
-      );
-    } else if ($(this).data("slide") === "introSlide-2") {
-      $(".intro__slider  .swiper-wrapper").css(
-        "transform",
-        "translate3d(-200vw, 0px, 0px)"
-      );
-    } else if ($(this).data("slide") === "introSlide-3") {
-      $(".intro__slider  .swiper-wrapper").css(
-        "transform",
-        "translate3d(-300vw, 0px, 0px)"
-      );
-    } else if ($(this).data("slide") === "introSlide-4") {
-      $(".intro__slider  .swiper-wrapper").css(
-        "transform",
-        "translate3d(-400vw, 0px, 0px)"
-      );
+    if ($(this).data("slide") == "1") {
+      galleryTop.slideTo(1, 1000);
+    } else if ($(this).data("slide") == "2") {
+      galleryTop.slideTo(2, 1000);
+    } else if ($(this).data("slide") == "3") {
+      galleryTop.slideTo(3, 1000);
+    } else if ($(this).data("slide") == "4") {
+      galleryTop.slideTo(4, 1000);
     }
   });
 
